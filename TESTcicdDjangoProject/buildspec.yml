@@ -14,8 +14,14 @@ environment_variables:
 phases:
   pre_build:
     commands:
-      - echo Prebuild ops
-      - pip3 install -r requirements.txt
+      - echo "Listing project directory contents:"
+      - ls -al
+      - echo "Contents of TESTcicdDjangoProject directory:"
+      - ls -al TESTcicdDjangoProject
+      - echo "Contents of requirements.txt file:"
+      - cat TESTcicdDjangoProject/requirements.txt
+      - pip3 install -r TESTcicdDjangoProject/requirements.txt
+
   build:
     commands:
       - echo Building the application 
